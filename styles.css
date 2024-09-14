@@ -1,0 +1,146 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.container {
+    max-width: 960px;
+}
+
+/*
+* Custom translucent site header
+*/
+
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+    color: #727272;
+    transition: color .15s ease-in-out;
+}
+
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*
+* Dummy devices (replace them with your own or something else entirely!)
+*/
+
+.product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: #333;
+    border-radius: 21px;
+    transform: rotate(30deg);
+}
+
+.product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+}
+
+.product-device-2 {
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: #e5e5e5;
+}
+
+
+/*
+* Extra utilities
+*/
+
+.flex-equal>* {
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .flex-md-equal>* {
+        flex: 1;
+    }
+}
+
+
+/* Thumbnail Designs */
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .parallax-header {
+    /* Set the background image */
+    background-image: url('images/hvacLogo.PNG');
+    
+    /* Full height of the header */
+    height: 100vh;
+    
+    /* Background settings */
+    background-size: 90%;
+    background-position: center;
+    background-attachment: fixed; /* This is key to the parallax effect */
+    background-repeat: no-repeat;
+    
+    /* Center the text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Overlay */
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.parallax-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* A subtle dark overlay for better text contrast */
+    background: rgba(0, 0, 0, var(--overlay-opacity, 0));
+    z-index: -1;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.container {
+    z-index: 2; /* Ensures the content inside the container stays above the background */
+}
